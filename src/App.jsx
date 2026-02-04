@@ -91,21 +91,24 @@ function handleNoHover() {
   function handleYesClick() {
     setShowSchedule(true);
   }
-function formatGoogleAllDayDate(dt) {
-  return dt.toISOString().split('T')[0].replace(/-/g, '');
+
+function formatGoogleAllDayDateFromLocal(value) {
+  return value.split('T')[0].replace(/-/g, '');
 }
 
+
 function buildGoogleCalendarUrl() {
-  const year = new Date().getFullYear();
+  const start = formatGoogleAllDayDateFromLocal(scheduledAt);
 
-  const start = new Date(year, 1, 14); // Feb 14
-  const end = new Date(year, 1, 15);   // Feb 15
-
-  const dates = `${formatGoogleAllDayDate(start)}/${formatGoogleAllDayDate(end)}`;
-  const text = encodeURIComponent('Lil mil');
-  const details = encodeURIComponent(
-    'Du er velkommen til at abuse min kalender '
+  const d = new Date(scheduledAt);
+  d.setDate(d.getDate() + 1);
+  const end = formatGoogleAllDayDateFromLocal(
+    d.toISOString().slice(0, 16)
   );
+
+  const dates = `${start}/${end}`;
+  const text = encodeURIComponent('Lil mil');
+  const details = encodeURIComponent('Du er velkommen til at abuse min kalender');
   const location = encodeURIComponent('Du bestemmer Århus/Hillerød');
   const add = encodeURIComponent('steenbergdaniel11@gmail.com');
 
