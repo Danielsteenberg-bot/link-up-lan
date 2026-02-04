@@ -64,8 +64,6 @@ body {
 }
 
 .stage {
-  width: min(900px, 94vw);
-  height: min(560px, calc(100vh - 180px));
   max-height: 75vh;
   border-radius: 16px;
   padding: 1rem;
@@ -170,7 +168,6 @@ body {
 }
 
 .controls .small {
-  width: calc(var(--btn-w) * 2 + var(--btn-gap, 8px));
   max-width: 94%;
   margin: 0 auto;
   text-align: center;
