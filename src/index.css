@@ -205,7 +205,7 @@ body {
 .modal h3 { margin: 0 0 .6rem 0; color: #064e3b; }
 .modal label { display:block; gap:.5rem; font-size: .95rem; color: #064e3b; }
 
-.modal input[type="datetime-local"] {
+.modal input[type="date"] {
   width: 100%;
   padding: .6rem .7rem;
   margin-top: .4rem;
