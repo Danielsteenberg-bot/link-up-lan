@@ -193,7 +193,7 @@ body {
 
 .modal {
   background: linear-gradient(180deg, #e8fff6, #c6f7e2);
-  padding: 1rem 1.25rem;
+  padding: 1rem 3rem;
   border-radius: 14px;
   box-shadow: 0 12px 40px rgba(2,8,16,0.18);
   min-width: min(360px, 92vw);
