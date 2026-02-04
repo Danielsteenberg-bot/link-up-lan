@@ -91,21 +91,27 @@ function handleNoHover() {
   function handleYesClick() {
     setShowSchedule(true);
   }
+function formatGoogleAllDayDate(dt) {
+  return dt.toISOString().split('T')[0].replace(/-/g, '');
+}
 
-  function formatGoogleDate(dt) {
-    return dt.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-  }
+function buildGoogleCalendarUrl() {
+  const year = new Date().getFullYear();
 
-  function buildGoogleCalendarUrl() {
-    const start = new Date(scheduledAt);
-    const end = new Date(start.getTime() + 1000 * 60 * 60 * 2);
-    const dates = `${formatGoogleDate(start)}/${formatGoogleDate(end)}`;
-    const text = encodeURIComponent('Lan lil mil');
-    const details = encodeURIComponent('Vi skal have en fantastisk lan sammen! Glæder mig til at se dig der.');
-    const location = encodeURIComponent('Du bestemmer Århus/Hillerød');
-    const add = encodeURIComponent('steenbergdaniel11@gmail.com');
-    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${dates}&details=${details}&location=${location}&add=${add}`;
-  }
+  const start = new Date(year, 1, 14); // Feb 14
+  const end = new Date(year, 1, 15);   // Feb 15
+
+  const dates = `${formatGoogleAllDayDate(start)}/${formatGoogleAllDayDate(end)}`;
+  const text = encodeURIComponent('Lil mil');
+  const details = encodeURIComponent(
+    'Du er velkommen til at abuse min kalender '
+  );
+  const location = encodeURIComponent('Du bestemmer Århus/Hillerød');
+  const add = encodeURIComponent('steenbergdaniel11@gmail.com');
+
+  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${dates}&details=${details}&location=${location}&add=${add}`;
+}
+
 
   const yesScale = Math.min(1 + dodgeCount * 0.18, 2.2);
   const noScale = Math.max(0.45, 1 - dodgeCount * 0.08);
