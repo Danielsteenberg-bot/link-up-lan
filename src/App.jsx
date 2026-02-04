@@ -13,7 +13,7 @@ export default function App() {
   const getDefaultDateTimeLocal = () => {
     const d = new Date();
     d.setDate(d.getDate() + 1);
-    d.setHours(19, 0, 0, 0);
+    d.setHours(14, 0, 0, 0);
     const pad = (n) => String(n).padStart(2, '0');
     return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(
       d.getHours()
