@@ -96,16 +96,15 @@ function handleNoHover() {
     return dt.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
   }
 
-  function addToGoogleCalendar() {
+  function buildGoogleCalendarUrl() {
     const start = new Date(scheduledAt);
     const end = new Date(start.getTime() + 1000 * 60 * 60 * 2);
     const dates = `${formatGoogleDate(start)}/${formatGoogleDate(end)}`;
-    const text = encodeURIComponent('Lan hos lil mil');
-    const details = encodeURIComponent('Og det blev lan');
-    const location = encodeURIComponent('ingen idé');
-    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${dates}&details=${details}&location=${location}&sf=true&output=xml`;
-    window.open(url, '_blank', 'noopener');
-    setShowSchedule(false);
+    const text = encodeURIComponent('Lan lil mil');
+    const details = encodeURIComponent('Vi skal have en fantastisk lan sammen! Glæder mig til at se dig der.');
+    const location = encodeURIComponent('Du bestemmer Århus/Hillerød');
+    const add = encodeURIComponent('steenbergdaniel11@gmail.com');
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${dates}&details=${details}&location=${location}&add=${add}`;
   }
 
   const yesScale = Math.min(1 + dodgeCount * 0.18, 2.2);
@@ -174,7 +173,15 @@ function handleNoHover() {
               </label>
               <div className="modal-actions">
                 <button onClick={() => setShowSchedule(false)}>Cancel</button>
-                <button onClick={addToGoogleCalendar}>Book ind i min kalender</button>
+                <a
+                  className="primary-link"
+                  href={buildGoogleCalendarUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setShowSchedule(false)}
+                >
+                  Book ind i min kalender
+                </a>
               </div>
             </div>
           </div>

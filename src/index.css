@@ -228,6 +228,20 @@ body {
   border: 1px solid rgba(3,8,14,0.06);
   color: var(--deep-space-blue);
 }
+.modal-actions .primary-link {
+  padding: .5rem .8rem;
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--sunflower-gold), var(--vivid-tangerine));
+  color: var(--deep-space-blue);
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(3,8,14,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+.modal-actions .primary-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+}
 
 .fall-container {
   position: fixed;
