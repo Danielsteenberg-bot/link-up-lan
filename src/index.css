@@ -88,6 +88,7 @@ body {
   box-sizing: border-box;
   background: radial-gradient(circle at 50% 20%, rgba(16,185,129,0.15), transparent 65%);
   border-radius: 14px;
+  max-height: 80%;
 }
 
 .loading {
@@ -132,8 +133,6 @@ body {
   transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms;
   letter-spacing: 0.2px;
 }
-
-
 
 .yes-btn {
   background: linear-gradient(180deg, #34d399, #10b981);
