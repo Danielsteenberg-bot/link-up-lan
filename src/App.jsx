@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import './App.css';
 import DagensTilMil from './DagensTilMil.jsx';
 import dagens from './dagenData.js';
 
