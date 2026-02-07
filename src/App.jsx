@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
+import DagensTilMil from './DagensTilMil.jsx';
+import dagens from './dagenData.js';
 
 export default function App() {
   const [dogUrl, setDogUrl] = useState('');
@@ -107,10 +109,14 @@ export default function App() {
   const yesScale = Math.min(1 + dodgeCount * 0.18, 2.2);
   const noScale = Math.max(0.45, 1 - dodgeCount * 0.08);
 
+
+  dagens.forEach((d) => console.log(d))
   return (
     <div className="app">
       <h1 className="title">Skal vi holde lan? 😶‍🌫️</h1>
       <h2 className="subtitle">Ellers kan du få et random hunde billede</h2>
+
+      <DagensTilMil />
 
       <div className="stage" ref={containerRef}>
         <div className="image-wrapper">
