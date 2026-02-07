@@ -63,6 +63,94 @@ body {
   text-align: center;
 }
 
+.dagens {
+  position: relative;
+  z-index: 30;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.dagens-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(52,211,153,0.35);
+  background: rgba(16,185,129,0.18);
+  color: var(--vanilla-custard);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dagens-text {
+  margin: 0;
+  max-width: min(520px, 90vw);
+  text-align: center;
+  color: rgba(230,245,238,0.95);
+}
+
+.dagens-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(2, 10, 14, 0.72);
+  z-index: 85;
+  padding: 1rem;
+  backdrop-filter: blur(2px);
+}
+
+.dagens-modal {
+  width: min(520px, 92vw);
+  background: linear-gradient(160deg, #eefcf6, #ccf7e4);
+  color: #053223;
+  border-radius: 18px;
+  padding: 1.4rem 1.6rem 1.2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(5, 50, 35, 0.08);
+}
+
+.dagens-modal-kicker {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(5, 50, 35, 0.55);
+  font-weight: 700;
+}
+
+.dagens-modal-text {
+  margin: 0 0 1.1rem 0;
+  font-size: clamp(1rem, 2.8vw, 1.25rem);
+  line-height: 1.45;
+  color: #062e21;
+}
+
+.dagens-modal-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.dagens-modal-close,
+.dagens-modal-again {
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(5, 50, 35, 0.12);
+  background: rgba(5, 50, 35, 0.04);
+  color: #053223;
+  font-weight: 700;
+}
+
+.dagens-modal-again {
+  background: linear-gradient(180deg, #34d399, #10b981);
+  color: #06271a;
+  border: 1px solid rgba(5, 50, 35, 0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
 .stage {
   max-height: 75vh;
   border-radius: 16px;
