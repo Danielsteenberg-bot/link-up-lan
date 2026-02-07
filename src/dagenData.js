@@ -1,5 +1,5 @@
 const dagens = [
-    'Må din pude altid være kold',
+    'Må din pude altid kun have den kolde side',
     'Må dit sengetøj altid føltes nyvasket',
     'Må dine øjne altid glimte som en knust flaske i solen',
     'Må din læbe altid være tør så du slipper for snus nedfald',
