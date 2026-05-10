@@ -39,7 +39,6 @@ const dagens = [
     'Må du aldrig sidde fast i en samtale om vejret med nogen du ikke gider tale med',
     'Må dit hår altid falde på plads som om du ikke har prøvet på det overhovedet',
     'Må du altid huske at du er grunden til at nogen smiler i dag uden at vide det',
-    'Må du aldrig få en plastikpose der bare opløser sig i hænderne på dig',
     'Må din hjerne altid huske det vigtige og glemme det pinlige',
     'Må du altid have præcis nok tid til at nyde dit måltid uden at skulle skynde dig',
     'Må dine sko altid se ud som om du har styr på det selv når du ikke har',
@@ -67,7 +66,6 @@ const dagens = [
     'Må din telefon altid gå i stille mode automatisk i de situationer der kræver det',
     'Må du aldrig nå at trykke send på en besked du fortryder',
     'Må din krop altid vide præcis hvornår den har brug for vand og give dig et hint',
-    'Må du altid finde en ledig toilet når du har brug for et',
     'Må dine headphones aldrig vikle sig ind i hinanden i lommen',
     'Må folk altid holde døren for dig lige præcis når du er ved at nå frem',
     'Må du altid finde den perfekte position i sofaen første forsøg',
@@ -132,7 +130,7 @@ const dagens = [
     'Hvis jeg blev til sten af at kigge dig i øjene ville jeg stadig gøre det hver gang',
     'Du er den slags person der gør at vi andre skal arbejde lidt hådere bare for at være med',
     'Må du aldrig sælge dig selv for billigt men huske hvor vild du er',
-    
+
 ]
 
 export default dagens;
